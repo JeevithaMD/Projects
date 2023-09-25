@@ -1,0 +1,9 @@
+ALTER TABLE keep
+DROP COLUMN keepID;
+
+ALTER TABLE keep
+DROP PRIMARY KEY;
+
+ALTER TABLE keep
+ADD FOREIGN KEY (pharmacyID) REFERENCES pharmacy(pharmacyID),
+ADD FOREIGN KEY (medicineID) REFERENCES medicine(medicineID);
